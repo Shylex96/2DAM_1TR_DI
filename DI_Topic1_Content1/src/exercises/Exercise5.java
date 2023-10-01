@@ -18,7 +18,7 @@ public class Exercise5 extends JFrame {
 		txtUsuario = new JTextField(10);
 
 		JLabel lblClave = new JLabel("Contraseña:");
-		txtClave = new JTextField(10);
+		txtClave = new JTextField(14);
 
 		JButton btnAceptar = new JButton("Aceptar");
 		btnAceptar.addActionListener(e -> {

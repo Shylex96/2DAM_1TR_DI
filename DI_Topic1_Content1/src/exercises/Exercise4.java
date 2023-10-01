@@ -13,23 +13,32 @@ public class Exercise4 extends JFrame {
 	public Exercise4() {
 
 		setTitle("Ejercicio 4");
-		setSize(250, 180);
+		setSize(250, 140);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		label1 = new JLabel("Primer número: ");
 		textField1 = new JTextField(10);
 		label2 = new JLabel("Segundo número: ");
-		textField2 = new JTextField(10);
+		textField2 = new JTextField(9);
 
 		JButton btnAceptar = new JButton("Sumar");
 
 		btnAceptar.addActionListener(e -> {
 
 			try {
-				int  num1 = Integer.parseInt(textField1.getText());
-				int  num2 = Integer.parseInt(textField2.getText());
-				int result = num1 + num2;
-				setTitle(Integer.toString(result));
+				double  num1 = Double.parseDouble(textField1.getText());
+				double  num2 = Double.parseDouble(textField2.getText());
+				double result = (num1 + num2);
+				
+				String titleString = Double.toString(result);
+				
+				if (titleString.contains(".0")) {
+					String newtitleString = Integer.toString((int) result);
+					setTitle(newtitleString);
+				} else {
+					setTitle(titleString);
+				}
+				
 				// setTitle(""+result)
 			} catch (NumberFormatException ex) {
 				JOptionPane.showMessageDialog(this, "Por favor, ingrese números válidos en ambos campos.", "Error", JOptionPane.ERROR_MESSAGE);

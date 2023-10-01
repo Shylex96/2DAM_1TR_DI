@@ -12,7 +12,7 @@ public class Exercise9 extends JFrame {
 
     public Exercise9() {
         setTitle("Ejercicio 9");
-        setSize(280, 100);
+        setSize(400, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         checkBoxIngles = new JCheckBox("Inglés");
